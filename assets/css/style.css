@@ -1,0 +1,326 @@
+.color-primary-theme {
+  color: #669c8c;
+}
+
+.color-primary-dark {
+  color: #000000;
+}
+
+.color-primary-dark2 {
+  color: #000000;
+}
+
+.color-primary-light {
+  color: #cecdcd;
+}
+
+.color-detail {
+  color: #f3f3f3;
+}
+
+.text-title-primary {
+  font: 300 9.6rem/1 "Josefin Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.text-title-secondary {
+  font: 700 2rem/1.2 "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.text-description {
+  font: 400 1.8rem/1.2 "Josefin Sans", sans-serif;
+}
+
+.text-menu {
+  font: 600 1.8rem/1 "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.grid-section {
+  grid-column: 2/4;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 10rem 30rem 1fr;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.bg {
+  background-color: #f3f3f3;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dd,
+dt,
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #000000;
+  color: #cecdcd;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: "Josefin Sans";
+  font-size: 1.8rem;
+  max-width: 180rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+@media (min-width: 48.12rem) {
+  body {
+    grid-template-columns: 1fr 12rem minmax(30rem, 80rem) 1fr;
+  }
+}
+
+.header {
+  grid-column: 1/-1;
+  background-color: #000000;
+  color: #cecdcd;
+  padding-bottom: 10rem;
+  box-shadow: inset 0rem -6rem #f3f3f3;
+  position: relative;
+  z-index: 10;
+}
+.header:after {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 6rem;
+  top: 13rem;
+  left: 35.5rem;
+  background-image: url("/assets/img/detail-animais-fantasticos.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  transform: rotate(90deg);
+  filter: blur(3px);
+}
+.header h1 {
+  z-index: 5;
+}
+
+.menu {
+  grid-column: 1;
+  margin-bottom: 5.6rem;
+  background-color: #669c8c;
+  margin-top: -12rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  z-index: 9999;
+}
+@media (min-width: 48.12rem) {
+  .menu {
+    grid-column: 3/5;
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+}
+.menu ul li a {
+  display: block;
+  padding: 1rem;
+  margin-right: 1rem;
+  color: #000000;
+}
+
+.animais {
+  grid-column: 1;
+  margin-top: -4rem;
+  padding-top: 4rem;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+}
+@media (min-width: 48.12rem) {
+  .animais {
+    grid-column: 1/5;
+  }
+}
+.animais-lista {
+  padding: 2rem;
+}
+.animais-lista img {
+  border-radius: 1rem;
+  box-shadow: 2rem 2rem 2rem rgba(27, 27, 27, 0.5);
+}
+.animais-lista li {
+  margin-top: 6rem;
+  position: relative;
+  z-index: 10;
+}
+.animais-lista li::after {
+  content: "";
+  display: block;
+  width: 30rem;
+  height: 30rem;
+  top: -6rem;
+  right: -8rem;
+  background-image: url("/assets/img/detail-animais-fantasticos.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  transform: rotate(90deg);
+  filter: blur(3px) opacity(0.5);
+  z-index: 20;
+  box-shadow: 1rem -1rem 2rem rgba(27, 27, 27, 0.4);
+}
+.animais-descricao {
+  padding: 4rem;
+}
+.animais-descricao h2 {
+  margin-top: 4rem;
+}
+.animais-descricao-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq {
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+  display: grid;
+  background-color: #669c8c;
+}
+@media (min-width: 48.12rem) {
+  .faq {
+    grid-column: 1/-1;
+  }
+}
+.faq-lista {
+  margin-left: 4rem;
+}
+@media (min-width: 48.12rem) {
+  .faq-lista {
+    grid-column: 2/4;
+    grid-row: 2;
+  }
+}
+.faq-lista dt:not(:first-child) {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+.faq-lista dt {
+  text-transform: capitalize;
+}
+.faq-lista dt::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+  margin-right: 1rem;
+  background-color: #000000;
+  border-radius: 4px 0 0 4px;
+}
+.faq-lista dd {
+  margin-left: 3rem;
+}
+
+.contato {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 12rem;
+  background-color: #000000;
+  padding-bottom: 12rem;
+  margin-bottom: 0;
+}
+@media (min-width: 48.12rem) {
+  .contato {
+    grid-column: 1/-1;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 10rem 30rem 1fr;
+    gap: 2rem;
+    box-shadow: inset 0rem -6rem #f3f3f3;
+  }
+}
+.contato-mapa {
+  padding: 4rem;
+}
+.contato-mapa img {
+  border-radius: 1rem;
+}
+@media (min-width: 48.12rem) {
+  .contato-mapa {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0;
+  }
+}
+.contato-dados {
+  margin-left: 4rem;
+}
+@media (min-width: 48.12rem) {
+  .contato-dados {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+.contato-dados li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contato-dados li::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.8rem;
+  background-image: url("/assets/img/detail-animais-fantasticos.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(90deg);
+  filter: blur(1px);
+}
+
+.copy {
+  grid-column: 1;
+  background-color: #669c8c;
+  border-radius: 6px 6px 6px 6px;
+}
+@media (min-width: 48.12rem) {
+  .copy {
+    grid-column: 3/5;
+    border-radius: 6px 0 0 6px;
+    margin-top: -8.5rem;
+    height: 4rem;
+  }
+}
+.copy p {
+  grid-column: 3/-5;
+  margin-left: 4rem;
+}
+
+/*# sourceMappingURL=style.css.map */

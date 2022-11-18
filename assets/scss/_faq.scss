@@ -1,0 +1,44 @@
+@use 'variables-typography' as *;
+@use 'mixins' as *;
+
+.faq {
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+  display: grid;
+  background-color: $color-primary-theme;
+
+  @include respond(broken) {
+    grid-column: 1/-1;
+  }
+
+  &-lista {
+    margin-left: 4rem;
+    @include respond(broken) {
+      grid-column: 2/4;
+      grid-row: 2;
+    }
+
+    dt:not(:first-child) {
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    dt {
+      text-transform: capitalize;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 2rem;
+        height: 1rem;
+        margin-right: 1rem;
+        background-color: $color-primary-dark;
+        border-radius: 4px 0 0 4px;
+      }
+    }
+
+    dd {
+      margin-left: 3rem;
+    }
+  }
+}

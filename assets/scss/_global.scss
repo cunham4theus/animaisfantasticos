@@ -1,0 +1,49 @@
+@use 'variables-typography' as *;
+@use 'mixins' as *;
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dd,
+dt,
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: $color-primary-dark;
+  color: $color-primary-light;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: 'Josefin Sans';
+  font-size: 1.8rem;
+  max-width: 180rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  @include respond(broken) {
+    grid-template-columns: 1fr 12rem minmax(30rem, 80rem) 1fr;
+  }
+}

@@ -1,0 +1,58 @@
+@use 'variables-typography' as *;
+@use 'mixins' as *;
+.header {
+  grid-column: 1/-1;
+  background-color: $color-primary-dark;
+  color: $color-primary-light;
+  padding-bottom: 10rem;
+  box-shadow: inset 0rem -6rem $color-detail;
+  position: relative;
+  z-index: 10;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 7rem;
+    height: 6rem;
+    top: 13rem;
+    left: 35.5rem;
+    background-image: url('/assets/img/detail-animais-fantasticos.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    transform: rotate(90deg);
+    filter: blur(3px);
+  }
+
+  h1 {
+    z-index: 5;
+  }
+}
+
+.menu {
+  grid-column: 1;
+  margin-bottom: 5.6rem;
+  background-color: $color-primary-theme;
+  margin-top: -12rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  z-index: 9999;
+  @include respond(broken) {
+    grid-column: 3/5;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+
+    li {
+      a {
+        display: block;
+        padding: 1rem;
+        margin-right: 1rem;
+        color: $color-primary-dark;
+      }
+    }
+  }
+}

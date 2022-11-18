@@ -1,0 +1,45 @@
+// !Colors
+$color-primary-theme: #669c8c;
+$color-primary-dark: #000000;
+$color-primary-dark2: #1b1b1b;
+$color-primary-light: #cecdcd;
+$color-detail:#f3f3f3;
+
+.color-primary-theme {
+  color: $color-primary-theme;
+}
+
+.color-primary-dark {
+  color: $color-primary-dark;
+}
+.color-primary-dark2 {
+  color: $color-primary-dark;
+}
+
+.color-primary-light {
+  color: $color-primary-light;
+}
+
+.color-detail {
+  color: $color-detail;
+}
+// !Typography
+.text-title-primary {
+  font:300 9.6rem/1 'Josefin Sans', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.text-title-secondary {
+  font:700 2rem/1.2 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.text-description {
+  font:400 1.8rem/1.2 'Josefin Sans', sans-serif;
+}
+
+.text-menu {
+  font:600 1.8rem/1 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+}

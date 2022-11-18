@@ -1,0 +1,16 @@
+@use 'variables-typography' as *;
+
+.grid-section {
+  grid-column: 2/4;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 10rem 30rem 1fr;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.bg {
+  background-color: $color-detail;
+}
