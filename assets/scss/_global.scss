@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 html {
-  font-size: 37.5%;
+  font-size: 48.12%;
   @include respond(broken) {
     font-size: 62.5%;
   }
