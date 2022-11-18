@@ -1,0 +1,19 @@
+@use 'variables-typography' as *;
+
+::-webkit-scrollbar {
+  width: 1.5rem;  
+}
+
+::-webkit-scrollbar-track {
+  background-color: $color-detail;
+  box-shadow: inset 1px 1px 4px rgba($color-primary-dark, .2);
+  width: 1rem;  
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient($color-primary-theme, darken($color-primary-theme, 10%));
+  box-shadow: inset 0px 0px 3px rgba($color-detail, .5);
+  border-radius: 1px;
+  border-radius: .3rem; 
+}
+

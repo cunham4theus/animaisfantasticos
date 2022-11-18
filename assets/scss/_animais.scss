@@ -5,39 +5,59 @@
   grid-column: 1;
   margin-top: -4rem;
   padding-top: 4rem;
-  display: grid;
+  display: grid; 
   place-items: center;
-  overflow-x: hidden;
-  @include respond(broken) {
+  overflow-x: hidden; 
+  max-width: max-content;
+
+  @include respond(broken) {    
     grid-column: 1/5;
   }
 
-  &-lista {
-    padding: 2rem;
+  &-after {
+    display: block;
+    position: relative;  
+    max-width: 50rem;   
 
-    img {
-      border-radius: 1rem;
-      box-shadow: 2rem 2rem 2rem rgb($color-primary-dark2, .5);
+    &::after {
+      content: '';
+      display: block;
+      width: 20rem;
+      height: 20rem;
+      top: 1rem;
+      left: -6rem;
+      background-image: url('/assets/img/detail-animais-fantasticos.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      transform: rotate(90deg);
+      filter: blur(3px) opacity(0.5);
+      z-index: 20;
+      box-shadow: 1rem -1rem 2rem rgb($color-primary-dark2, 0.4);
     }
-    li {
-      margin-top: 6rem;
+
+    &-lista {
       position: relative;
-      z-index: 10;
-      &::after {
-        content: '';
-        display: block;
-        width: 30rem;
-        height: 30rem;
-        top: -6rem;
-        right: -8rem;
-        background-image: url('/assets/img/detail-animais-fantasticos.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        transform: rotate(90deg);
-        filter: blur(3px) opacity(0.5);
-        z-index: 20;
-        box-shadow: 1rem -1rem 2rem rgb($color-primary-dark2, .4);
+      padding: 0 2rem;
+      display: grid;
+      max-width: 42rem;
+      grid-template-columns: repeat(6, 1fr);
+      overflow-y: hidden;
+      padding-bottom: 4rem;
+      gap: 10rem;    
+      border-radius: 1rem;
+      box-shadow: inset 0px 0px 1rem rgb($color-primary-dark2, 0.2); 
+      cursor: grab;
+
+      img {
+        border-radius: 1rem;
+        box-shadow: 2rem 2rem 2rem rgb($color-primary-dark2, 0.5);
+      }
+
+      li {
+        margin-top: 6rem;
+        z-index: 10;
+        width: 40rem;
       }
     }
   }
@@ -45,7 +65,7 @@
   &-descricao {
     padding: 4rem;
     max-width: 80ch;
-   
+
     h2 {
       margin-top: 4rem;
     }

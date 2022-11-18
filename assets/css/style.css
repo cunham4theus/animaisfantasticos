@@ -166,31 +166,25 @@ body {
   display: grid;
   place-items: center;
   overflow-x: hidden;
+  max-width: max-content;
 }
 @media (min-width: 48.12rem) {
   .animais {
     grid-column: 1/5;
   }
 }
-.animais-lista {
-  padding: 2rem;
-}
-.animais-lista img {
-  border-radius: 1rem;
-  box-shadow: 2rem 2rem 2rem rgba(27, 27, 27, 0.5);
-}
-.animais-lista li {
-  margin-top: 6rem;
+.animais-after {
+  display: block;
   position: relative;
-  z-index: 10;
+  max-width: 50rem;
 }
-.animais-lista li::after {
+.animais-after::after {
   content: "";
   display: block;
-  width: 30rem;
-  height: 30rem;
-  top: -6rem;
-  right: -8rem;
+  width: 20rem;
+  height: 20rem;
+  top: 1rem;
+  left: -6rem;
   background-image: url("/assets/img/detail-animais-fantasticos.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -199,6 +193,28 @@ body {
   filter: blur(3px) opacity(0.5);
   z-index: 20;
   box-shadow: 1rem -1rem 2rem rgba(27, 27, 27, 0.4);
+}
+.animais-after-lista {
+  position: relative;
+  padding: 0 2rem;
+  display: grid;
+  max-width: 42rem;
+  grid-template-columns: repeat(6, 1fr);
+  overflow-y: hidden;
+  padding-bottom: 4rem;
+  gap: 10rem;
+  border-radius: 1rem;
+  box-shadow: inset 0px 0px 1rem rgba(27, 27, 27, 0.2);
+  cursor: grab;
+}
+.animais-after-lista img {
+  border-radius: 1rem;
+  box-shadow: 2rem 2rem 2rem rgba(27, 27, 27, 0.5);
+}
+.animais-after-lista li {
+  margin-top: 6rem;
+  z-index: 10;
+  width: 40rem;
 }
 .animais-descricao {
   padding: 4rem;
@@ -327,6 +343,23 @@ body {
 .copy p {
   grid-column: 3/-5;
   margin-left: 4rem;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f3f3f3;
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.2);
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#669c8c, #517e71);
+  box-shadow: inset 0px 0px 3px rgba(243, 243, 243, 0.5);
+  border-radius: 1px;
+  border-radius: 0.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
